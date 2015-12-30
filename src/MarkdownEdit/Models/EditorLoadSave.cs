@@ -117,7 +117,8 @@ namespace MarkdownEdit.Models
                 OverwritePrompt = true,
                 RestoreDirectory = true,
                 FileName = Markdown.SuggestFilenameFromTitle(editor.EditBox.Text),
-                Filter = "Markdown files (*.md)|*.md|"
+                Filter = "Markdown files (*.markdown)|*.markdown|"
+					+ "Markdown files (*.md)|*.md|"
                     + "HTML files (*.html)|*.html|"
                     + "PDF files (*.pdf)|*.pdf|"
                     + "Docx files (*.docx)|*.docx|"
@@ -177,7 +178,8 @@ namespace MarkdownEdit.Models
             if (string.IsNullOrWhiteSpace(file))
             {
                 const string fileFilter =
-                    "Markdown files (*.md)|*.md|"
+					"Markdown files (*.markdown)|*.markdown|"
+						+ "Markdown files (*.md)|*.md|"
                         + "Microsoft Word files (*.docx)|*.docx|"
                         + "HTML files (*.html)|*.html|"
                         + "All files (*.*)|*.*";
